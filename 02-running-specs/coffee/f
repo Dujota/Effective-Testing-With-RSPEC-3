@@ -1,0 +1,20 @@
+[32m.[0m[31mF[0m
+
+Failures:
+
+  1)  A cup of Coffee with milk costs $1.25
+     [31mFailure/Error: [0m[32mexpect[0m(coffee.price).to eql([1;35m1.25[0m )[0m
+     [31m[0m
+     [31m  expected: 1.25[0m
+     [31m       got: 1.0[0m
+     [31m[0m
+     [31m  (compared using eql?)[0m
+     [36m# ./spec/coffee_spec.rb:15:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.01446 seconds (files took 0.15287 seconds to load)
+[31m2 examples, 1 failure[0m
+
+Failed examples:
+
+[31mrspec ./spec/coffee_spec.rb:14[0m [36m#  A cup of Coffee with milk costs $1.25[0m
+
