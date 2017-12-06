@@ -1,4 +1,5 @@
-require "../../../app/api"
+require_relative "../../../app/api"
+require "rack/test"
 
 module ExpenseTracker
   RSpec.describe API do
@@ -12,7 +13,7 @@ module ExpenseTracker
         it 'returns an error message'
         it 'responds with 422 (Unprocessable entity)'
       end
-      
+
     end
   end
 end
