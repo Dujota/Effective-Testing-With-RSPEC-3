@@ -1,3 +1,4 @@
+require_relative '../../app/api'
 require "rack/test"
 require "json"
 
