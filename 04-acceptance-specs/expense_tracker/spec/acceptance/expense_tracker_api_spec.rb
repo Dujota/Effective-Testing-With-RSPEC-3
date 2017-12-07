@@ -21,22 +21,22 @@ module ExpenseTracker
 
     it "records submitted expenses" do
       pending 'Need to persist expenses'
-      
+
       coffee = post_expense(
         'payee' => 'Starbucks',
-        'amount'=> 5.75,
+        'amount' => 5.75,
         'date' => '2017-06-10'
       )
 
       zoo = post_expense(
         'payee' => 'Zoo',
-        'amount'=> 15.25,
+        'amount' => 15.25,
         'date' => '2017-06-10'
       )
 
       groceries = post_expense(
         'payee' => 'Whole Foods',
-        'amount'=> 95.20,
+        'amount' => 95.20,
         'date' => '2017-06-11'
       )
 

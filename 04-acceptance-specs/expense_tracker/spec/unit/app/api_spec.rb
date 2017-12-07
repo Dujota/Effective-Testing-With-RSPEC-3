@@ -12,7 +12,7 @@ module ExpenseTracker
       API.new(ledger: ledger)
     end
 
-    let(:ledger) { instance_double('ExpenseTracker::Ledger') }
+    let(:ledger) {  instance_double('ExpenseTracker::Ledger') }
 
     describe "POST /expense" do
       context "when the expenseis successfully recorded" do
