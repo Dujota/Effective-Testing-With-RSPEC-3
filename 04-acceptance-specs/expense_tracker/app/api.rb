@@ -10,10 +10,14 @@ module ExpenseTracker
     end
 
     # Later, callers do this ledger: Ledger.new
-    app = API.new()
+    # app = API.new()
 
     post '/expenses' do
-      JSON.generate('expense_id' => 42)
+      # JSON.generate('expense_id' => 42)
+      # status 404 test the code by breaking it
+      expense = JSON.parse(request.body.read)
+      result = @ledger.record(expense)
+      JSON.generate('expense_id' => result.expense_id)
     end
 
     get '/expenses/:date' do
