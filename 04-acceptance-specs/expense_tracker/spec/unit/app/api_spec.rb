@@ -1,8 +1,7 @@
-require_relative "../../../app/api"
-require "rack/test"
+require_relative '../../../app/api'
+require 'rack/test'
 
 module ExpenseTracker
-
   RecordResult = Struct.new(:success?, :expense_id, :error_message)
 
   RSpec.describe API do
@@ -24,7 +23,7 @@ module ExpenseTracker
         post '/expense', JSON.generate(expense)
 
         parsed = JSON.parse(last_response.body)
-        expect(parsed).to include('expense_id': 417)
+        expect(parsed).to include('expense_id' => 417)
         end
         it 'responds with a 200 (OK)'
       end
