@@ -4,7 +4,7 @@ require "json"
 module ExpenseTracker
   class API < Sinatra::Base
 
-    def initializer(ledger: Ledger.new)
+    def initializer(ledger: Ledger.new) # default value so callers can just say API.new and get the default
       @ledger = ledger
       super() # rest of initialization from Sinatra
     end
