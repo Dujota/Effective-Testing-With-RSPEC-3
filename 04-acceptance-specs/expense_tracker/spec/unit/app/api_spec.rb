@@ -31,7 +31,7 @@ module ExpenseTracker
           expense = { 'some' => 'data' }
           allow(ledger).to receive(:record)
             .with(expense)
-            .and_return(RecordResult(true, 417, nil))
+            .and_return(RecordResult.new(true, 417, nil))
           post '/expenses', JSON.generate(expense)
           expect(last_response.status).to eq(200)
 
