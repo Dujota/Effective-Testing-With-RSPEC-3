@@ -11,6 +11,10 @@ module ExpenseTracker
       API.new(ledger: ledger)
     end
 
+    def parsed
+      JSON.parse(last_response.body)
+    end
+
     let(:ledger) { instance_double('ExpenseTracker::Ledger') }
 
 
@@ -29,7 +33,6 @@ module ExpenseTracker
 
         post '/expenses', JSON.generate(expense)
 
-        parsed = JSON.parse(last_response.body)
         expect(parsed).to include('expense_id' => 417)
         end
         it 'responds with a 200 (OK)' do
@@ -52,7 +55,6 @@ module ExpenseTracker
         it 'returns an error message' do
           post '/expenses', JSON.generate(expense)
 
-          parsed = JSON.parse(last_response.body)
           expect(parsed).to include('error' => 'Expense Incomplete')
         end
 
