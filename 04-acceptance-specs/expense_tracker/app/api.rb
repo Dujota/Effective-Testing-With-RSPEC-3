@@ -28,7 +28,9 @@ module ExpenseTracker
     end
 
     get '/expenses/:date' do
-      JSON.generate([])
+    # status 404 test the code by breaking it
+      JSON.generate(@ledger.expenses_on(params[:date]))
+
     end
   end
 end

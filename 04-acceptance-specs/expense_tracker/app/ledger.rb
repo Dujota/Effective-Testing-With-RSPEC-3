@@ -8,5 +8,9 @@ RecordResult = Struct.new(:success?, :expense_id, :error_message)
       #code
     end
 
+    def expenses_on(date)
+      #code
+    end
+
   end
 end
