@@ -32,7 +32,7 @@ module ExpenseTracker
       context "when expense lacks a payee" do
         it "rejects the expense as invalid" do
           expense.delete('payee')
-          result = Ledger.record(expense)
+          result = ledger.record(expense)
 
           expect(result).to_not be_success
           expect(result.id).to eq(nil)
