@@ -3,7 +3,7 @@ require_relative "../../../sequel"
 require_relative "../../support/db"
 
 module ExpenseTracker
-  RSpec.describe Ledger, :aggregate_failures do
+  RSpec.describe Ledger, :aggregate_failures, :db do
     let(:ledger) { Ledger.new}
 
     let(:expense) do
