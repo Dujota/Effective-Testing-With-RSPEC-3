@@ -16,7 +16,7 @@ RecordResult = Struct.new(:success?, :expense_id, :error_message)
     end
 
     def expenses_on(date)
-      #code
+      DB[:expenses].where(date: date).all
     end
 
   end
