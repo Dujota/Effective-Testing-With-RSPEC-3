@@ -15,7 +15,7 @@ ENV['RACK_ENV'] = 'test'
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
-  config.when_first_matching_exmple_defined(:db) do
+  config.when_first_matching_example_defined(:db) do
     require_relative 'support/db'
   end
 
