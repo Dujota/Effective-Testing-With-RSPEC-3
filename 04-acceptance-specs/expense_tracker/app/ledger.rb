@@ -1,3 +1,5 @@
+require_relative "../sequel"
+
 module ExpenseTracker
 
 RecordResult = Struct.new(:success?, :expense_id, :error_message)
